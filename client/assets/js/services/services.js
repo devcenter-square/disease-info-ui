@@ -6,12 +6,12 @@ app.factory('Disease', function($http) {
 
     // get all diseases
     diseaseFactory.all = function() {
-        return $http.get('https://disease-info.herokuapp.com/diseases/');
+        return $http.get('https://disease-info-api.herokuapp.com/diseases/');
     };
 
     // get a single video
     diseaseFactory.get = function(name) {
-        return $http.get('https://disease-info.herokuapp.com/diseases/' + name);
+        return $http.get('https://disease-info-api.herokuapp.com/diseases/' + name);
     };
 
     return diseaseFactory;
