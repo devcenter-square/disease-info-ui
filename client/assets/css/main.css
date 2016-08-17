@@ -560,6 +560,10 @@ a:hover {
 }
 .navbar-right li a {
     font-size: 15px;
+    cursor: pointer;
+}
+.modal-body p{
+    font-size: 15px;
 }
 .banner {
     background: url("../img/particles.png");

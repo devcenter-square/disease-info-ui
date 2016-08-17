@@ -7,6 +7,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The top diseases that kill Nigerians are diseases that can be easily prevented and also cured. Disease info is a web app for<br> Nigerians to get information on<br> diseases and how to prevent them">
+    <meta name="author" content="DevCenter Square">
+    <meta name="keywords" content="disease, malaria, typhoid, lassa, nigeria, diseases outbreak, lagos, nigeria, west africa,  ebola disease, disease, prevention, tuberculosis, measles">
     <title>Disease Info</title>
 
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -41,8 +44,29 @@
 
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="">Why</a></li>
+                        <li><a data-toggle="modal" data-target="#myModal">Why</a></li>
                     </ul>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Why</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>The top diseases that kill Nigerians are diseases that can be easily prevented and also cured.</p>
+                                    <p>If people knew the right information on these diseases, causes of infections, and what they can be done ro prevent them, it would go a long way.</p>
+                                    <p>Disease Info was built so as to make information on major diseases affecting Nigerians easily accessible.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
@@ -61,7 +85,8 @@
     </div>
 
 
-
+<script type="text/javascript" src="/assets/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/assets/js/angular.min.js"></script>
 <script type="text/javascript" src="/assets/js/angular.min.js.map"></script>
 <script type="text/javascript" src="/assets/js/angular-animate.min.js"></script>
@@ -69,6 +94,7 @@
 <script type="text/javascript" src="/assets/js/angular-route.min.js"></script>
 <script type="text/javascript" src="/assets/js/loading-bar.min.js"></script>
 <script type="text/javascript" src="/assets/js/dirPagination.js"></script>
+<script type="text/javascript" src="/assets/js/ui-bootstrap-2.0.2.min.js"></script>
 
 <script type="text/javascript" src="/assets/js/controllers/mainCtrl.js"></script>
 
