@@ -5,7 +5,14 @@
                 <div class="bottom-container col-sm-12">
                     <div class="bottom-header">
                         <div class="col-sm-12">
-                            <h3>Top Diseases</h3>
+                            <div class="col-sm-6">
+                                <h3>Top Diseases</h3>
+                            </div>
+                            <div class="col-sm-6 pull-right">
+                                <input class="form-control search-box" placeholder="Search diseases..." ng-model="search">
+                            </div>
+
+
                         </div>
                     </div>
 
@@ -34,7 +41,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 bottom-right">
-                <div class="searchbox">
+                <div class="listed-diseasebox">
 
                     <ul>
                         <li ng-repeat="disease in diseases"><a ng-href="/{{disease.name}}">{{ disease.name }}</a></li>

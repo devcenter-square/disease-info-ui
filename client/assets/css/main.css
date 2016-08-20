@@ -624,17 +624,25 @@ p.d-shortsymptoms {
     color: white;
 }
 /*search box*/
-.searchbox {
+
+.search-box {
+    float: right;
+    width: 50%;
+    margin-top: 15px;
+}
+
+/*listed disease box*/
+.listed-diseasebox {
     background-color: white;
     padding: 20px 0px;
 }
-.searchbox ul {
+.listed-diseasebox ul {
     list-style: none;
 }
-.searchbox ul li {
+.listed-diseasebox ul li {
     margin-top: 15px;
 }
-.searchbox ul li a {
+.listed-diseasebox ul li a {
     color: #000;
     font-size: 14px;
     margin-top: 15px;
