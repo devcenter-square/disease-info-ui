@@ -667,6 +667,11 @@ p.d-shortsymptoms {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+a.source-link {
+    color: black;
+    font-size: 16px;
+    text-decoration: underline;
+}
 
 
 /*media query*/

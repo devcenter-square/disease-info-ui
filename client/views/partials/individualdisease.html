@@ -64,14 +64,14 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-12 m-t-md">
-                            <p class="d-shortinfo"> {{ oneDisease.disease.more }}</p>
+                        <div class="col-sm-12 m-t-md m-b-md">
+                            <a target="_blank" href="{{ oneDisease.disease.more | source }}" class="source-link">Source</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 bottom-right">
-                <div class="searchbox">
+                <div class="listed-diseasebox">
                     <ul>
                         <li ng-repeat="disease in diseases"><a ng-href="/{{disease.name}}">{{ disease.name }}</a></li>
                     </ul>
