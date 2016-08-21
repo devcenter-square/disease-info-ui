@@ -667,10 +667,10 @@ p.d-shortsymptoms {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-a.source-link {
-    color: black;
-    font-size: 16px;
-    text-decoration: underline;
+.btn-source {
+    border-radius: 1px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 
