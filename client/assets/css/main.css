@@ -673,7 +673,21 @@ p.d-shortsymptoms {
     letter-spacing: 1px;
 }
 
-
+/*footer*/
+.footer {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.footer p {
+    color: #000;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 14px;
+}
+.footer p a {
+    color: #000;
+}
 /*media query*/
 @media (max-width: 767px) {
     .bottom-right {
