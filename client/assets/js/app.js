@@ -1,5 +1,5 @@
 
-var app = angular.module('diseaseinfo', ['ngRoute', 'ngAnimate', 'mainCtrl', 'diseaseService', 'ui.bootstrap', 'angular-loading-bar', 'angularUtils.directives.dirPagination' ]);
+var app = angular.module('diseaseinfo', ['ngRoute', 'ngAnimate', 'mainCtrl', 'diseaseService', 'angular-loading-bar', 'angularUtils.directives.dirPagination' ]);
 
 app.config(function ($routeProvider, $locationProvider) {
 

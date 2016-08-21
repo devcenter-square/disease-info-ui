@@ -17,22 +17,21 @@
                     </div>
 
                     <div class="bottom-content">
-                        <div class="col-sm-12 bottom-content-box" dir-paginate="disease in diseases|itemsPerPage:5|filter:search">
+                        <div class="col-sm-12 bottom-content-box" dir-paginate="disease in diseases | filter:search | itemsPerPage: pageSize" current-page="currentPage">
                             <div >
                                 <h3 class="d-name"> {{disease.name}} </h3>
 
                                 <h4 class="m-t-lg">Description</h4>
                                 <p class="d-shortinfo">{{disease.facts}}</p>
 
-                                <h4 class="m-t-lg">Symptoms</h4>
-                                <p class="d-shortsymptoms">{{disease.symptoms}}</p>
+
                                 <div class="row">
                                     <a ng-href="/{{disease.name}}" class="btn btn-sucess btn-more">More</a>
                                 </div>
                             </div>
                         </div>
                         <dir-pagination-controls
-                                max-size="5"
+                                max-size="7"
                                 direction-links="true"
                                 boundary-links="true" >
                         </dir-pagination-controls>

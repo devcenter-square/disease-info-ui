@@ -7,8 +7,13 @@ app.controller('diseaseCtrl', function (Disease, $scope) {
     Disease.all()
         .success(function(data) {
             // bind the diseases that come back to vm.diseases
+
             $scope.diseases = angular.fromJson(data.diseases);
+
         });
+
+    $scope.currentPage = 1;
+    $scope.pageSize = 5;
 });
 
 app.controller('individualDiseaseCtrl', function($scope, Disease, $routeParams) {
