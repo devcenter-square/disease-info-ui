@@ -6,7 +6,7 @@
                     <div class="bottom-header">
                         <div class="row">
                             <div class="col-md-6 col-xs-12">
-                                <h3>Top Diseases</h3>
+                                <h3>Diseases</h3>
                             </div>
                             <div class="col-md-offset-3 col-md-3 col-xs-12">
                                 <input class="form-control search-box" placeholder="Search diseases..." ng-model="search">
@@ -41,11 +41,20 @@
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 bottom-right">
                 <div class="listed-diseasebox">
-
+                    <h3>Top Diseases</h3>
                     <ul>
-                        <li ng-repeat="disease in diseases"><a ng-href="/{{disease.name}}">{{ disease.name }}</a></li>
+                        <li><a ng-href="">Acute Bronchitis (Lower Respiratory Infections)</a></li>
+                        <li><a ng-href="/Pneumonia%20-%20WHO">Pneumonia</a></li>
+                        <li><a ng-href="">HIV/AIDs</a></li>
+                        <li><a ng-href="/Malaria%20-%20WHO">Malaria</a></li>
+                        <li><a ng-href="/Tuberculosis%20-%20WHO">Tuberculosis</a></li>
+                        <li><a ng-href="">Diarrhoea</a></li>
+                        <li><a ng-href="/Meningococcal%20meningitis%20%20-%20WHO">Meningitis</a></li>
+                        <li><a ng-href="/Measles%20-%20WHO">Measles</a></li>
+                        <li><a ng-href="">Stroke</a></li>
+                        <li><a ng-href="">Diabetes</a></li>
                     </ul>
-
+                    <a href="http://www.who.int/gho/countries/nga.pdf" class="btn btn-success btn-source pull-right m-r-md">Source</a>
                 </div>
             </div>
         </div>

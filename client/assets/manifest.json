@@ -1,0 +1,16 @@
+{
+  	"short_name": "DI",
+	"name": "Disease Info",
+  	"description": "A web app for Nigerians to get information on diseases and how to prevent them",
+	"icons": [
+		{
+			"src": "\/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image\/png"
+		}
+	],
+	"theme_color": "#ffffff",
+  	"start_url": "disease-info.herokuapp.com",
+  	"orientation": "portrait",
+	"display": "standalone"
+}

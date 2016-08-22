@@ -633,7 +633,12 @@ p.d-shortsymptoms {
 /*listed disease box*/
 .listed-diseasebox {
     background-color: white;
-    padding: 20px 0px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.listed-diseasebox h3 {
+    padding-left: 35px;
+    margin-top: 0;
 }
 .listed-diseasebox ul {
     list-style: none;
