@@ -634,7 +634,7 @@ p.d-shortsymptoms {
 .listed-diseasebox {
     background-color: white;
     padding-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 65px;
 }
 .listed-diseasebox h3 {
     padding-left: 35px;
@@ -662,6 +662,7 @@ p.d-shortsymptoms {
 /*individual disease page*/
 .onedisease-body {
     background-color: white;
+    padding-bottom: 20px;
 }
 .onedisease-header > div {
     border-bottom: 1px solid #eee;
