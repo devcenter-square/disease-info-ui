@@ -20,7 +20,7 @@
 		}
 	],
 	"theme_color": "#ffffff",
-  	"start_url": "disease-info.herokuapp.com",
+  	"start_url": "https://disease-info.herokuapp.com",
   	"orientation": "portrait",
 	"display": "standalone"
 }
