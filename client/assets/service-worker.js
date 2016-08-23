@@ -7,9 +7,7 @@ self.addEventListener('install', function(e) {
     e.waitUntil(
         caches.open(cacheName).then(function(cache) {
             return cache.addAll([
-                './views/index.html',
-                './views/partials/home.html',
-                './views/partials/individualdisease.html',
+                './',
                 '/css/bootstrap.min.css',
                 '/css/main.css',
                 '/css/loading-bar.min.css',
@@ -19,8 +17,8 @@ self.addEventListener('install', function(e) {
                 '/js/dirPagination.js',
                 '/js/controllers/mainCtrl.js',
                 '/js/services/services.js',
-                '/js/app.js'
-
+                '/js/app.js',
+                './offline.html'
             ]).then(function() {
                 self.skipWaiting();
             });
