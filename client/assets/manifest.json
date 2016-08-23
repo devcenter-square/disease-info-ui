@@ -20,7 +20,8 @@
 		}
 	],
 	"theme_color": "#ffffff",
-  	"start_url": "./views",
+  	"start_url": "./views/index.html",
+  	"scope": "./views/index.html",
   	"orientation": "portrait",
 	"display": "standalone"
 }
