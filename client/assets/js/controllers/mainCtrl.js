@@ -7,7 +7,7 @@ app.filter('source', function() {
     }
 });
 
-app.controller('diseaseCtrl', function (Disease, $scope) {
+app.controller('diseaseCtrl', function (Disease, $scope, $localStorage) {
 
     Disease.all()
         .success(function(data) {
