@@ -7,6 +7,12 @@ app.filter('source', function() {
     }
 });
 
+app.filter('hyphen', function() {
+    return function(value){
+        return value.split("/").pop("-")
+    }
+});
+
 app.controller('diseaseCtrl', function (Disease, $scope) {
 
     Disease.all()
