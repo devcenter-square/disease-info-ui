@@ -560,6 +560,10 @@ a:hover {
 }
 .navbar-right li a {
     font-size: 15px;
+    cursor: pointer;
+}
+.modal-body p{
+    font-size: 15px;
 }
 .banner {
     background: url("../img/particles.png");
@@ -620,17 +624,29 @@ p.d-shortsymptoms {
     color: white;
 }
 /*search box*/
-.searchbox {
-    background-color: white;
-    padding: 20px 0px;
-}
-.searchbox ul {
-    list-style: none;
-}
-.searchbox ul li {
+
+.search-box {
+
     margin-top: 15px;
 }
-.searchbox ul li a {
+
+/*listed disease box*/
+.listed-diseasebox {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 65px;
+}
+.listed-diseasebox h3 {
+    padding-left: 35px;
+    margin-top: 0;
+}
+.listed-diseasebox ul {
+    list-style: none;
+}
+.listed-diseasebox ul li {
+    margin-top: 15px;
+}
+.listed-diseasebox ul li a {
     color: #000;
     font-size: 14px;
     margin-top: 15px;
@@ -646,6 +662,7 @@ p.d-shortsymptoms {
 /*individual disease page*/
 .onedisease-body {
     background-color: white;
+    padding-bottom: 20px;
 }
 .onedisease-header > div {
     border-bottom: 1px solid #eee;
@@ -655,8 +672,27 @@ p.d-shortsymptoms {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+.btn-source {
+    border-radius: 1px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-
+/*footer*/
+.footer {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.footer p {
+    color: #000;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 14px;
+}
+.footer p a {
+    color: #000;
+}
 /*media query*/
 @media (max-width: 767px) {
     .bottom-right {

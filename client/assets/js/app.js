@@ -1,3 +1,8 @@
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('/assets/service-worker.js')
+        .then(function() { console.log("Service Worker Registered"); });
+}
 
 var app = angular.module('diseaseinfo', ['ngRoute', 'ngAnimate', 'mainCtrl', 'diseaseService', 'angular-loading-bar', 'angularUtils.directives.dirPagination' ]);
 
@@ -17,6 +22,7 @@ app.config(function ($routeProvider, $locationProvider) {
             controller: 'individualDiseaseCtrl',
             controllerAs: 'individual'
         });
+
 
 });
 

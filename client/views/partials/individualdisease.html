@@ -64,16 +64,30 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-12 m-t-md">
-                            <p class="d-shortinfo"> {{ oneDisease.disease.more }}</p>
+                        <div class="col-sm-12 m-t-md m-b-md">
+                            <a target="_blank" href="{{ oneDisease.disease.more | source }}" class="btn btn-success btn-source">Source</a>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-xs-12 col-sm-4 col-md-4 bottom-right">
-                <div class="searchbox">
+                <div class="listed-diseasebox">
+                    <h3>Most Common Diseases</h3>
                     <ul>
-                        <li ng-repeat="disease in diseases"><a ng-href="/{{disease.name}}">{{ disease.name }}</a></li>
+                        <li><a ng-href="/Pneumonia%20-%20WHO">Pneumonia</a></li>
+                        <li><a ng-href="/aids%20%20-%20WHO">HIV/AIDs</a></li>
+                        <li><a ng-href="/Malaria%20-%20WHO">Malaria</a></li>
+                        <li><a ng-href="/Tuberculosis%20-%20WHO">Tuberculosis</a></li>
+                        <li><a ng-href="/Meningococcal%20meningitis%20%20-%20WHO">Meningitis</a></li>
+                        <li><a ng-href="/Measles%20-%20WHO">Measles</a></li>
+                    </ul>
+                    <div class="row">
+                        <a href="http://www.who.int/gho/countries/nga.pdf" class="btn btn-success btn-source pull-left m-l-xxl m-t-sm">Source</a>
+                    </div>
+
+                    <ul ng-repeat="disease in diseases">
+                        <li><a ng-href="/{{disease.name}}">{{disease.name}}</a></li>
                     </ul>
                 </div>
             </div>
