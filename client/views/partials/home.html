@@ -54,8 +54,11 @@
                         <a href="http://www.who.int/gho/countries/nga.pdf" class="btn btn-success btn-source pull-left m-l-xxl m-t-sm">Source</a>
                     </div>
 
-                    <ul ng-repeat="disease in diseases">
-                        <li><a ng-href="/{{disease.name}}">{{disease.name}}</a></li>
+                </div>
+
+                <div class="listed-diseasebox m-t-md">
+                    <ul>
+                        <li ng-repeat="disease in diseases"><a ng-href="/{{disease.name}}">{{disease.name}}</a></li>
                     </ul>
                 </div>
             </div>
