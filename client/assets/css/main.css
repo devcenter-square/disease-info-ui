@@ -17,6 +17,58 @@ html, body{
     font-weight: 300;
 
 }
+*{
+    font-family:tahoma;
+}
+/* .testheight Not required - unless testing ;) */
+.testheight {
+    height:1200px;
+    font-size:20px;
+    text-align:center;
+    padding:100px 20px;
+}
+.scrolltop {
+    display:none;
+    width:100%;
+    margin:0 auto;
+    position:fixed;
+    bottom:20px;
+    right:10px;
+}
+.scroll {
+    position:absolute;
+    right:10px;
+    bottom:20px;
+    background:#b2b2b2;
+    background:rgba(178,178,178,0.7);
+    padding:12px;
+    text-align: center;
+    margin: 0 0 0 0;
+    cursor:pointer;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.scroll:hover {
+    background:rgba(178,178,178,1.0);
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.scroll:hover .fa {
+    padding-top:-10px;
+}
+.scroll .fa {
+    font-size:24px;
+    margin-top:-5px;
+    margin-left:1px;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+}
 img{
     max-width:100%;
 }
@@ -635,6 +687,7 @@ p.d-shortsymptoms {
     background-color: white;
     padding-top: 20px;
     padding-bottom: 65px;
+    padding-right: 10px;
 }
 .listed-diseasebox h3 {
     padding-left: 35px;
@@ -651,6 +704,7 @@ p.d-shortsymptoms {
     font-size: 14px;
     margin-top: 15px;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .form-control {
