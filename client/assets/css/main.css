@@ -17,16 +17,6 @@ html, body{
     font-weight: 300;
 
 }
-*{
-    font-family:tahoma;
-}
-/* .testheight Not required - unless testing ;) */
-.testheight {
-    height:1200px;
-    font-size:20px;
-    text-align:center;
-    padding:100px 20px;
-}
 .scrolltop {
     display:none;
     width:100%;
@@ -751,6 +741,15 @@ p.d-shortsymptoms {
 @media (max-width: 767px) {
     .bottom-right {
         margin-top: 15px;
+    }
+}
+
+@media (max-width: 416px) {
+    .banner > .container {
+        top: 10rem;
+    }
+    .banner-text {
+        margin-top: 0;
     }
 }
 @media (max-width: 991px) {
