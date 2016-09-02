@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="bottom-content">
-                        <div class="col-sm-12 bottom-content-box" dir-paginate="disease in diseases | filter:search | itemsPerPage: pageSize" current-page="currentPage">
+                        <div class="col-sm-12 bottom-content-box" dir-paginate="disease in diseases | diseasesFilter:search | itemsPerPage: pageSize" current-page="currentPage">
                             <div >
                                 <h3 class="d-name"> {{disease.name}} </h3>
 

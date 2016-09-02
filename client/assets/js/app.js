@@ -42,7 +42,5 @@ app.config(function ($routeProvider, $locationProvider) {
             controller: 'individualDiseaseCtrl',
             controllerAs: 'individual'
         });
-
-
 });
 
