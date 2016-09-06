@@ -2,14 +2,16 @@ var app = angular.module('mainCtrl', ['diseaseService']);
 
 
 app.filter('source', function() {
-    return function(value){
-        return value.split("Source is").pop()
+    return function (value) {
+        if (value) return value.split("Source is").pop();
+        return [];
     }
 });
 
 app.filter('hyphen', function() {
     return function(value){
-        return value.split("/").pop("-")
+        if (value) return value.split("/").pop("-");
+        return [];
     }
 });
 
@@ -29,7 +31,10 @@ app.controller('diseaseCtrl', function (Disease, $scope) {
     Disease.all()
         .success(function(data) {
             $scope.diseases = angular.fromJson(data.diseases);
-
+            stor.add("diseases", $scope.diseases);
+        }).error(function (err, obj) {
+            console.error(err, obj);
+            $scope.diseases = stor.get("diseases") || [];
         });
 
 
@@ -44,10 +49,12 @@ app.controller('individualDiseaseCtrl', function($scope, Disease, $routeParams) 
             $scope.oneDisease = angular.fromJson(data);
         });
 
-
     Disease.all()
         .success(function(data) {
             $scope.diseases = angular.fromJson(data.diseases);
+        }).error(function (err, obj) {
+            console.error(err, obj);
+            $scope.diseases = stor.get("diseases") || [];
         });
 });
 
