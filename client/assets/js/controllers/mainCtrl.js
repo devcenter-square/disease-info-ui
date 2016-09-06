@@ -43,10 +43,22 @@ app.controller('diseaseCtrl', function (Disease, $scope) {
 });
 
 app.controller('individualDiseaseCtrl', function($scope, Disease, $routeParams) {
+    function encodeName(name) {
+        return (name || 'one-disease').toLowerCase().replace(/ /g, '-');
+    }
 
     Disease.get($routeParams.name)
         .success(function(data) {
             $scope.oneDisease = angular.fromJson(data);
+            stor.add(encodeName($routeParams.name), $scope.oneDisease);
+        }).error(function (err, obj) {
+            console.error(err, obj);
+            $scope.oneDisease = stor.get(encodeName($routeParams.name));
+            if (!$scope.oneDisease) {
+                $scope.oneDisease = $scope.diseases.filter(function (disease) {
+                    return disease.name.toLowerCase() == $routeParams.name.toLowerCase();
+                })[0];
+            }
         });
 
     Disease.all()
