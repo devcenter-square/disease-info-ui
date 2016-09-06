@@ -13,6 +13,10 @@
  res.sendFile(path.join(__dirname + '/client/views/index.html'));
  });
 
+ app.get('/service-worker.js', function (req, res) {
+     res.sendFile(path.join(__dirname + '/client/service-worker.js'));
+ });
+
  app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
