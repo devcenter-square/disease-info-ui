@@ -33,5 +33,5 @@ Also see the [Disease Info's Contributor's Guide](https://github.com/devcenter-s
 
 ## To Do
 - [ ] Flash cards - easily digestible presentation rather than long post for every disease
-- [X] Offline access
+- [ ] Complete offline access
 - [ ] Add images and infographics to aid visual representation 
