@@ -50,35 +50,6 @@ self.addEventListener('install', function(e) {
     );
 });
 
-// when the browser fetches a URL…
-/*self.addEventListener('fetch', function(event) {
- // … either respond with the cached object or go ahead and fetch the actual URL
- event.respondWith(
- caches.match(event.request).then(function(response) {
- if (response) {
- // retrieve from cache
- return response;
- }
- // fetch as normal
- return fetch(event.request);
- })
- );
- });*/
-
-/*self.addEventListener('fetch', function(e) {
- console.log('[ServiceWorker] Fetch', e.request.url);
- var dataUrl = 'https://disease-info-api.herokuapp.com/diseases/';
- if (e.request.url.indexOf(dataUrl) === 0) {
- // Put data handler code here
- } else {
- e.respondWith(
- caches.match(e.request).then(function(response) {
- return response || fetch(e.request);
- })
- );
- }
- });*/
-
 self.addEventListener('fetch', function (event) {
     //console.log("Fetch:", event);
     event.respondWith(
