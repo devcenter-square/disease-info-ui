@@ -2,6 +2,10 @@
     margin: 0;
 }
 
+[reverse-ng-cloak] {
+    display: none;
+}
+
 body {
     font-family: "proxima";
     background-color: #F8F8F8;

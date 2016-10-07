@@ -28,6 +28,8 @@ app.filter('diseasesFilter', function () {
 
 app.controller('diseaseCtrl', function (Disease, $scope) {
     $scope.dfactory = Disease;
+    $scope.String = String;
+
     Disease.all()
         .success(function (data) {
             $scope.diseases = angular.fromJson(data.diseases);
@@ -56,10 +58,23 @@ app.controller('individualDiseaseCtrl', function ($scope, Disease, $routeParams)
     }
 
     $scope.dfactory = Disease;
+    $scope.diseases = [];
+    $scope.String = String;
 
-    Disease.get($routeParams.name)
+    
+
+    function getIndividualDisease(diseaseName) {
+        Disease.get(diseaseName)
         .success(function (data) {
             $scope.oneDisease = angular.fromJson(data);
+            $scope.oneDisease.hasInfo = function () {
+                return !String.isNullOrEmpty($scope.oneDisease.disease.facts) || 
+                    !String.isNullOrEmpty($scope.oneDisease.disease.symptoms) ||
+                    !String.isNullOrEmpty($scope.oneDisease.disease.treatment) ||
+                    !String.isNullOrEmpty($scope.oneDisease.disease.transmission) ||
+                    !String.isNullOrEmpty($scope.oneDisease.disease.diagnosis) ||
+                    !String.isNullOrEmpty($scope.oneDisease.disease.prevention);
+            }
             //console.log($scope.oneDisease);
             $scope.dfactory.db.put("diseases", $scope.oneDisease.disease, $scope.oneDisease.disease.id);
             //stor.add(encodeName($routeParams.name), $scope.oneDisease);
@@ -89,19 +104,30 @@ app.controller('individualDiseaseCtrl', function ($scope, Disease, $routeParams)
             }
             console.error(err, obj);
         });
+    }
 
     Disease.all()
-        .success(function (data) {
-            $scope.diseases = angular.fromJson(data.diseases);
-        }).error(function (err, obj) {
-            console.error(err, obj);
-            //$scope.diseases = stor.get("diseases") || [];
-            $scope.dfactory.db.from("diseases").list(1000).done(function (results) {
-                $scope.diseases = results;
-            }).fail(function (err, obj) {
-                console.error(err, obj);
-            });
-        });
+       .success(function (data) {
+           $scope.diseases = angular.fromJson(data.diseases);
+           $scope.diseases.forEach(function (d) {
+               $scope.dfactory.db.put("diseases", d, d.id);
+           });
+
+           var diseaseUrlName = $routeParams.name;
+           var diseaseName = $scope.diseases.map(function (d) {
+               return d.name;
+           }).filter(function (dname) {
+               return dname.EncodeURI() == diseaseUrlName.EncodeURI();
+           })[0];
+           getIndividualDisease(diseaseName);
+       }).error(function (err, obj) {
+           $scope.dfactory.db.from("diseases").list(1000).done(function (results) {
+               $scope.diseases = results;
+           }).fail(function (err, obj) {
+               console.error(err, obj);
+           });
+           console.error(err, obj);
+       });
 });
 
 

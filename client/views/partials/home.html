@@ -26,7 +26,7 @@
 
 
                                 <div class="row">
-                                    <a ng-href="/{{disease.name | hyphen}}" class="btn btn-sucess btn-more">More</a>
+                                    <a ng-href="/{{(disease.name | hyphen).EncodeURI()}}" class="btn btn-sucess btn-more">More</a>
                                 </div>
                             </div>
                         </div>
@@ -43,12 +43,12 @@
                 <div class="listed-diseasebox">
                     <h3>Most Common Diseases</h3>
                     <ul>
-                        <li><a ng-href="/Pneumonia%20-%20WHO">Pneumonia</a></li>
-                        <li><a ng-href="/aids%20%20-%20WHO">HIV/AIDs</a></li>
-                        <li><a ng-href="/Malaria%20-%20WHO">Malaria</a></li>
-                        <li><a ng-href="/Tuberculosis%20-%20WHO">Tuberculosis</a></li>
-                        <li><a ng-href="/Meningococcal%20meningitis%20%20-%20WHO">Meningitis</a></li>
-                        <li><a ng-href="/Measles%20-%20WHO">Measles</a></li>
+                        <li><a ng-href="/pneumonia-who">Pneumonia</a></li>
+                        <li><a ng-href="/aids-who">HIV/AIDs</a></li>
+                        <li><a ng-href="/malaria-who">Malaria</a></li>
+                        <li><a ng-href="/tuberculosis-who">Tuberculosis</a></li>
+                        <li><a ng-href="/meningococcal-meningitis-who">Meningitis</a></li>
+                        <li><a ng-href="/measles-who">Measles</a></li>
                     </ul>
                     <div class="row">
                         <a href="http://www.who.int/gho/countries/nga.pdf" class="btn btn-success btn-source pull-left m-l-xxl m-t-sm">Source</a>
@@ -58,7 +58,7 @@
 
                 <div class="listed-diseasebox m-t-md">
                     <ul>
-                        <li ng-repeat="disease in diseases"><a ng-href="/{{disease.name}}">{{disease.name}}</a></li>
+                        <li ng-repeat="disease in diseases"><a ng-href="/{{disease.name.EncodeURI()}}">{{disease.name}}</a></li>
                     </ul>
                 </div>
             </div>
