@@ -19,9 +19,9 @@ app.filter('diseasesFilter', function () {
     return function (items, search) {
         if (!search) return items;
         return items.filter(function (element, index, array) {
-            return element.name._looksLikeItContains(search) > 0.3;
+            return element.name.toLowerCase()._looksLikeItContains(search.toLowerCase()) > 0.3;
         }).sort(function (a, b) {
-            return b.name._looksLikeItContains(search) - a.name._looksLikeItContains(search);
+            return b.name.toLowerCase()._looksLikeItContains(search.toLowerCase()) - a.name.toLowerCase()._looksLikeItContains(search.toLowerCase());
         });
     }
 });
