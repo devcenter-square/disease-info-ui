@@ -6,13 +6,21 @@
                     <div class="onedisease-header">
                         <div class="col-sm-12">
                             <h3>{{ oneDisease.disease.name }}</h3>
+                            <ul>
+                                <li><a href="#overview">Overview</li>
+                                <li><a href="#symptoms">Symptoms</li>
+                                <li><a href="#treatment">Treatment</li>
+                                <li><a href="#transmission">Transmission</li>
+                                <li><a href="#diagnosis">Diagnosis</li>
+                                <li><a href="#prevention">Prevention</li>
+                            </ul>
                         </div>
                     </div>
 
                     <div class="onedisease-body-content">
                         <div class="col-sm-12 onedisease-body-box" ng-if="!String.isNullOrEmpty(oneDisease.disease.facts)">
                             <div>
-                                <h4 class="d-name">Overview</h4>
+                                <h4 class="d-name" id="overview">Overview</a></h4>
 
                                 <p class="d-shortinfo">{{ oneDisease.disease.facts }}</p>
 
@@ -21,7 +29,7 @@
 
                         <div class="col-sm-12 onedisease-body-box" ng-if="!String.isNullOrEmpty(oneDisease.disease.symptoms)">
                             <div>
-                                <h4 class="d-name">Symptoms</h4>
+                                <h4 class="d-name" id="symptoms">Symptoms</h4>
 
                                 <p class="d-shortinfo">{{ oneDisease.disease.symptoms }}</p>
 
@@ -30,7 +38,7 @@
 
                         <div class="col-sm-12 onedisease-body-box" ng-if="!String.isNullOrEmpty(oneDisease.disease.treatment)">
                             <div>
-                                <h4 class="d-name">Treatment</h4>
+                                <h4 class="d-name" id="treatment">Treatment</h4>
 
                                 <p class="d-shortinfo">{{ oneDisease.disease.treatment }}</p>
 
@@ -39,7 +47,7 @@
 
                         <div class="col-sm-12 onedisease-body-box" ng-if="!String.isNullOrEmpty(oneDisease.disease.transmission)">
                             <div>
-                                <h4 class="d-name">Transmission</h4>
+                                <h4 class="d-name" id="transmission">Transmission</h4>
 
                                 <p class="d-shortinfo">{{ oneDisease.disease.transmission }}</p>
 
@@ -48,7 +56,7 @@
 
                         <div class="col-sm-12 onedisease-body-box" ng-if="!String.isNullOrEmpty(oneDisease.disease.diagnosis)">
                             <div>
-                                <h4 class="d-name">Diagnosis</h4>
+                                <h4 class="d-name" id="diagnosis">Diagnosis</h4>
 
                                 <p class="d-shortinfo">{{ oneDisease.disease.diagnosis }}</p>
 
@@ -57,7 +65,7 @@
 
                         <div class="col-sm-12 onedisease-body-box" ng-if="!String.isNullOrEmpty(oneDisease.disease.prevention)">
                             <div>
-                                <h4 class="d-name">Prevention</h4>
+                                <h4 class="d-name" id="prevention">Prevention</h4>
 
                                 <p class="d-shortinfo">{{ oneDisease.disease.prevention }}</p>
 
