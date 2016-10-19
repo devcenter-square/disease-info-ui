@@ -2,6 +2,7 @@
   "name": "angularapp",
   "dependencies": {
     "express": "^4.9.8",
+    "express-sslify": "^1.1.0",
     "nodemon": "^1.8.1"
   },
   "scripts": {
