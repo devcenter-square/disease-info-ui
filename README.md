@@ -25,7 +25,7 @@ If you use https, use this instead
 ## Contributing
 The #1 contribution you could make is to blog, share, post, tweet, and tell people about disease-info. This will go a long way in building a sustainable community.
 
-View the [Contribution Guide](https://github.com/devcenter-square/disease-info-ui/blob/develop/CONTRIBUTING.md) for how to contribute.
+View the [Contribution Guide](https://github.com/devcenter-square/disease-info-ui/blob/dev/CONTRIBUTING.md) for how to contribute.
 
 ## To Do
 - [ ] Flash cards - easily digestible presentation rather than long post for every disease
