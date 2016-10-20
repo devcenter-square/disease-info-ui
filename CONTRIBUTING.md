@@ -9,8 +9,6 @@ From time to time, there would be ongoing [project(s)](https://github.com/devcen
 
 We are happy to accept contributions of any kind, including feedback and ideas, translations for other locales, and functionality.
 
-If you want to add new functionality, you can follow the standard approach by filling the form above.
-
 Git Workflow
 ============
 The array of possible workflows can make it hard to know where to begin when implementing Git in the workplace. This page provides a starting point by surveying the most common Git workflows for enterprise teams. As you read through, remember that these workflows are designed to be guidelines rather than concrete rules.
