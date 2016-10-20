@@ -22,16 +22,12 @@ If you use https, use this instead
 3. npm install
 4. nodemon or node server.js to launch the app
 
-## Contributors Guide
-The #1 contribution you could make is to blog, share, post, tweet, and tell people about disease-info. TThis will go a long way in building a sustainable community.
+## Contributing
+The #1 contribution you could make is to blog, share, post, tweet, and tell people about disease-info. This will go a long way in building a sustainable community.
 
-1. Please always push to the dev branch
-2. Then create a PR
-3. PRs will be merged by the PR Team
-
-Also see the [Disease Info's Contributor's Guide](https://github.com/devcenter-square/disease-info/blob/develop/CONTRIBUTION.md) for more info.
+View the [Contribution Guide](https://github.com/devcenter-square/disease-info-ui/blob/develop/CONTRIBUTING.md) for how to contribute.
 
 ## To Do
 - [ ] Flash cards - easily digestible presentation rather than long post for every disease
 - [ ] Complete offline access
-- [ ] Add images and infographics to aid visual representation 
+- [ ] Add images and infographics to aid visual representation
