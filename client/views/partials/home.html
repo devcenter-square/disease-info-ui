@@ -18,8 +18,8 @@
 
                     <div class="bottom-content">
                         <div class="col-sm-12 bottom-content-box" dir-paginate="disease in diseases | diseasesFilter:search | itemsPerPage: pageSize" current-page="currentPage">
-                            <div >
-                                <h3 class="d-name"> {{disease.name}} </h3>
+                            <div>
+                                <h3 class="d-name"><a href="{{(disease.name | hyphen).EncodeURI()}}">{{disease.name}}</a></h3>
 
                                 <h4 class="m-t-lg">Description</h4>
                                 <p class="d-shortinfo">{{disease.facts}}</p>
