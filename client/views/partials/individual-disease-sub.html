@@ -1,0 +1,95 @@
+﻿<div class="onedisease m-t-lg m-b-lg">
+    <div class="container">
+        <div class="row" ng-show="diseases">
+            <div class="col-xs-12 col-sm-8 col-md-8">
+                <div class="onedisease-body col-sm-12">
+                    <div class="onedisease-header">
+                        <div class="col-sm-12">
+                            <h3>{{ oneDisease.disease.name }}</h3>
+                        </div>
+                    </div>
+                    <div class="onedisease-body-content">
+                        <div class="col-sm-12 onedisease-body-box" ng-if="subName.toLowerCase() == 'overview'">
+                            <div>
+                                <h4 class="d-name">Overview</h4>
+                                <p class="d-shortinfo" ng-if="!String.isNullOrEmpty(oneDisease.disease.facts)">{{ oneDisease.disease.facts }}</p>
+                                <p class="d-shortinfo" ng-if="String.isNullOrEmpty(oneDisease.disease.facts)">No Overview Data</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 onedisease-body-box" ng-if="subName.toLowerCase() == 'symptoms'">
+                            <div>
+                                <h4 class="d-name">Symptoms</h4>
+                                <p class="d-shortinfo" ng-if="!String.isNullOrEmpty(oneDisease.disease.symptoms)">{{ oneDisease.disease.symptoms }}</p>
+                                <p class="d-shortinfo" ng-if="String.isNullOrEmpty(oneDisease.disease.symptoms)">No Symptom Data</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 onedisease-body-box" ng-if="subName.toLowerCase() == 'treatment'">
+                            <div>
+                                <h4 class="d-name">Treatment</h4>
+                                <p class="d-shortinfo" ng-if="!String.isNullOrEmpty(oneDisease.disease.treatment)">{{ oneDisease.disease.treatment }}</p>
+                                <p class="d-shortinfo" ng-if="String.isNullOrEmpty(oneDisease.disease.treatment)">No Treatment Data</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 onedisease-body-box" ng-if="subName.toLowerCase() == 'transmission'">
+                            <div>
+                                <h4 class="d-name">Transmission</h4>
+                                <p class="d-shortinfo" ng-if="!String.isNullOrEmpty(oneDisease.disease.transmission)">{{ oneDisease.disease.transmission }}</p>
+                                <p class="d-shortinfo" ng-if="String.isNullOrEmpty(oneDisease.disease.transmission)">No Transmission Data</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 onedisease-body-box" ng-if="subName.toLowerCase() == 'diagnosis'">
+                            <div>
+                                <h4 class="d-name">Diagnosis</h4>
+                                <p class="d-shortinfo" ng-if="!String.isNullOrEmpty(oneDisease.disease.diagnosis)">{{ oneDisease.disease.diagnosis }}</p>
+                                <p class="d-shortinfo" ng-if="String.isNullOrEmpty(oneDisease.disease.diagnosis)">No Diagnosis Data</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 onedisease-body-box" ng-if="subName.toLowerCase() == 'prevention'">
+                            <div>
+                                <h4 class="d-name">Prevention</h4>
+                                <p class="d-shortinfo" ng-if="!String.isNullOrEmpty(oneDisease.disease.prevention)">{{ oneDisease.disease.prevention }}</p>
+                                <p class="d-shortinfo" ng-if="String.isNullOrEmpty(oneDisease.disease.prevention)">No Prevention Data</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 m-t-md m-b-md" ng-if="oneDisease.hasInfo() && !String.isNullOrEmpty(oneDisease.disease.more)">
+                            <a target="_blank" href="{{ oneDisease.disease.more | source }}" class="btn btn-success btn-source">Source</a>
+                        </div>
+                        <div class="col-sm-12 onedisease-body-box">
+                            <div class="row">
+                                <h4 class="col-sm-12 d-shortinfo text-center">
+                                    <a href="/{{oneDisease.disease.name.EncodeURI()}}/overview" ng-if="subName.toLowerCase() != 'overview'">Overview | </a>
+                                    <a href="/{{oneDisease.disease.name.EncodeURI()}}/symptoms" ng-if="subName.toLowerCase() != 'symptoms'">Symptoms | </a>
+                                    <a href="/{{oneDisease.disease.name.EncodeURI()}}/treatment" ng-if="subName.toLowerCase() != 'treatment'">Treatment | </a>
+                                    <a href="/{{oneDisease.disease.name.EncodeURI()}}/diagnosis" ng-if="subName.toLowerCase() != 'diagnosis'">Diagnosis<span ng-if="subName.toLowerCase() != 'prevention'"> | </span></a>
+                                    <a href="/{{oneDisease.disease.name.EncodeURI()}}/prevention" ng-if="subName.toLowerCase() != 'prevention'">Prevention</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 bottom-right">
+                <div class="listed-diseasebox">
+                    <h3>Most Common Diseases</h3>
+                    <ul>
+                        <li><a ng-href="/pneumonia-who">Pneumonia</a></li>
+                        <li><a ng-href="/aids-who">HIV/AIDs</a></li>
+                        <li><a ng-href="/malaria-who">Malaria</a></li>
+                        <li><a ng-href="/tuberculosis-who">Tuberculosis</a></li>
+                        <li><a ng-href="/meningococcal-meningitis-who">Meningitis</a></li>
+                        <li><a ng-href="/measles-who">Measles</a></li>
+                    </ul>
+                    <div class="row">
+                        <a href="http://www.who.int/gho/countries/nga.pdf" class="btn btn-success btn-source pull-left m-l-xxl m-t-sm">Source</a>
+                    </div>
+
+                </div>
+                <div class="listed-diseasebox">
+                    <ul ng-repeat="disease in diseases">
+                        <li><a ng-href="/{{disease.name.EncodeURI()}}">{{disease.name}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
