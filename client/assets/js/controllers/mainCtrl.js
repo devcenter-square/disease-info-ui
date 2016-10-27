@@ -60,7 +60,7 @@ app.controller('individualDiseaseCtrl', function ($scope, Disease, $routeParams)
     $scope.dfactory = Disease;
     $scope.diseases = [];
     $scope.String = String;
-
+    $scope.subName = $routeParams.sub;
     
 
     function getIndividualDisease(diseaseName) {
