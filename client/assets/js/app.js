@@ -20,7 +20,7 @@ $(document).ready(function () {
 
 });
 
-var app = angular.module('diseaseinfo', ['ngRoute', 'ngAnimate', 'mainCtrl', 'diseaseService', 'angular-loading-bar', 'angularUtils.directives.dirPagination' ]);
+var app = angular.module('diseaseinfo', ['ngRoute', 'ngAnimate', 'mainCtrl', 'diseaseService', 'angular-loading-bar', 'angularUtils.directives.dirPagination']);
 
 app.config(function ($routeProvider, $locationProvider) {
 
@@ -35,6 +35,12 @@ app.config(function ($routeProvider, $locationProvider) {
 
         .when('/:name', {
             templateUrl: './views/partials/individualdisease.html',
+            controller: 'individualDiseaseCtrl',
+            controllerAs: 'individual'
+        })
+
+        .when('/:name/:sub', {
+            templateUrl: './views/partials/individual-disease-sub.html',
             controller: 'individualDiseaseCtrl',
             controllerAs: 'individual'
         });

@@ -12,7 +12,9 @@
                     <div class="onedisease-body-content">
                         <div class="col-sm-12 onedisease-body-box" ng-if="!String.isNullOrEmpty(oneDisease.disease.facts)">
                             <div>
-                                <h4 class="d-name">Overview</a></h4>
+                                <h4 class="d-name">
+                                <a ng-href="/{{ oneDisease.disease.name.EncodeURI() }}/overview">Overview</a>
+                                </h4>
 
                                 <p class="d-shortinfo">{{ oneDisease.disease.facts }}</p>
 
@@ -21,7 +23,9 @@
 
                         <div class="col-sm-12 onedisease-body-box" ng-if="!String.isNullOrEmpty(oneDisease.disease.symptoms)">
                             <div>
-                                <h4 class="d-name">Symptoms</h4>
+                                <h4 class="d-name">
+                                    <a ng-href="/{{ oneDisease.disease.name.EncodeURI() }}/symptoms">Symptoms</a>
+                                </h4>
 
                                 <p class="d-shortinfo">{{ oneDisease.disease.symptoms }}</p>
 
@@ -30,7 +34,9 @@
 
                         <div class="col-sm-12 onedisease-body-box" ng-if="!String.isNullOrEmpty(oneDisease.disease.treatment)">
                             <div>
-                                <h4 class="d-name">Treatment</h4>
+                                <h4 class="d-name">
+                                    <a ng-href="/{{ oneDisease.disease.name.EncodeURI() }}/treatment">Treatment</a>
+                                </h4>
 
                                 <p class="d-shortinfo">{{ oneDisease.disease.treatment }}</p>
 
@@ -39,7 +45,9 @@
 
                         <div class="col-sm-12 onedisease-body-box" ng-if="!String.isNullOrEmpty(oneDisease.disease.transmission)">
                             <div>
-                                <h4 class="d-name">Transmission</h4>
+                                <h4 class="d-name">
+                                    <a ng-href="/{{ oneDisease.disease.name.EncodeURI() }}/transmission">Transmission</a>
+                                </h4>
 
                                 <p class="d-shortinfo">{{ oneDisease.disease.transmission }}</p>
 
@@ -48,7 +56,9 @@
 
                         <div class="col-sm-12 onedisease-body-box" ng-if="!String.isNullOrEmpty(oneDisease.disease.diagnosis)">
                             <div>
-                                <h4 class="d-name">Diagnosis</h4>
+                                <h4 class="d-name">
+                                    <a ng-href="/{{ oneDisease.disease.name.EncodeURI() }}/diagnosis">Diagnosis</a>
+                                </h4>
 
                                 <p class="d-shortinfo">{{ oneDisease.disease.diagnosis }}</p>
 
@@ -57,7 +67,9 @@
 
                         <div class="col-sm-12 onedisease-body-box" ng-if="!String.isNullOrEmpty(oneDisease.disease.prevention)">
                             <div>
-                                <h4 class="d-name">Prevention</h4>
+                                <h4 class="d-name">
+                                    <a ng-href="/{{ oneDisease.disease.name.EncodeURI() }}/prevention">Prevention</a>
+                                </h4>
 
                                 <p class="d-shortinfo">{{ oneDisease.disease.prevention }}</p>
 
