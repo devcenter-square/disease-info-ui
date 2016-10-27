@@ -9,7 +9,7 @@ app.factory('Disease', function($http) {
         return $http.get('https://disease-info-api.herokuapp.com/diseases/');
     };
 
-    // get a single video
+    // get a single disease
     diseaseFactory.get = function(name) {
         return $http.get('https://disease-info-api.herokuapp.com/diseases/' + name);
     };
