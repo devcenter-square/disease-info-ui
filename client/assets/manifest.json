@@ -4,8 +4,8 @@
   	"description": "A web app for Nigerians to get information on diseases and how to prevent them",
 	"icons": [
 		{
-			"src": "/assets/android-chrome-192x192.png",
-			"sizes": "192x192",
+			"src": "/assets/android-chrome-144x144.png",
+			"sizes": "144x144",
 			"type": "image/png"
 		},
 		{
@@ -21,8 +21,8 @@
 	],
 	"theme_color": "#ffffff",
 	"background_color": "#F8F8F8",
-  	"start_url": "./",
-  	"scope": "./",
+  	"start_url": "../",
+  	"scope": "../",
   	"orientation": "portrait",
 	"display": "standalone"
 }
