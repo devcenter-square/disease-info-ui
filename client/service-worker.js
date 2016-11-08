@@ -42,7 +42,7 @@ self.addEventListener('install', function(e) {
                 '/assets/css/loading-bar.min.css',
                 '/views/partials/home.html',
                 '/views/partials/individualdisease.html',
-                'https://disease-info-api.herokuapp.com/'
+                'https://disease-info-api.herokuapp.com/diseases/'
             ]).then(function() {
                 self.skipWaiting();
             });
