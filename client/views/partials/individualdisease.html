@@ -16,7 +16,7 @@
                                 <a ng-href="/{{ oneDisease.disease.name.EncodeURI() }}/overview">Overview</a>
                                 </h4>
 
-                                <p class="d-shortinfo">{{ oneDisease.disease.facts }}</p>
+                                <p class="d-shortinfo">{{ oneDisease.disease.facts.join(' ') }}</p>
 
                             </div>
                         </div>
