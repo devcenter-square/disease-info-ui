@@ -22,7 +22,7 @@
                                 <h3 class="d-name"><a href="{{(disease.name | hyphen).EncodeURI()}}">{{disease.name}}</a></h3>
 
                                 <h4 class="m-t-lg">Description</h4>
-                                <p class="d-shortinfo">{{disease.facts}}</p>
+                                <p class="d-shortinfo">{{disease.facts.join(' ')}}</p>
 
 
                                 <div class="row">
